@@ -27,16 +27,40 @@ function renderLicenseSection(license) {}
 //how can i call this function
 //this will construct entire readme file
 function generateMarkdown(data) {
-  return `# ${data.title} ## Description
+  return `# ${data.title} 
+  ## Description
   ${data.description}
-  
-  ## Table of Contents
 
-  ##Tests
+  ## Table of Contents
+  -[Installation](#installation)
+  
+  -[Usage](#usage)
+  
+  -[Contribution](#contribution)
+  
+  -[Test](#test)
+  
+  -[Questions](#questions)
+  
+  ## Installation
+  '''''${data.installation}'''''
+
+  ## Usage 
+  ${data.usage}
+  
+  ## Contribution
+  ${data.contributer}
+  
+  ## Test
   ${data.test}
 
-  ##contribution
-  ${data.contribution}
+  ## Questions
+  ${data.github}
+  ${data.email}
+
+
+
+
 `;
 }
 

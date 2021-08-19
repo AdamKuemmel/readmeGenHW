@@ -47,6 +47,11 @@ const questions = [
     name: "contributer",
     message: "how does a user contribute to this project?",
   },
+  {
+    type: "input",
+    name: "usage",
+    message: "how does a user implement usage of this project?",
+  },
 ];
 // inquirer.prompt(questions).then((data) => {
 //   console.log(data); });
