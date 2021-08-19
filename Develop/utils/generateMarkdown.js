@@ -1,10 +1,16 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license != "None") {
-    return "";
-  } else if (license === "MIT") {
-    return console.log("working");
+  if (license === "MIT") {
+    return "[![MIT shield](https://img.shields.io/badge/license-MIT-brightgreen)](https://mit-license.org/)";
+  } else if (license === "apache") {
+    return "[![apache sheild](https://img.shields.io/badge/license-Apache-green)](https://apache.org/licenses/)";
+  } else if (license === "creative commons") {
+    return "[![creative commons sheild](https://img.shields.io/badge/license-CreativeCommons-yellowgreen)](https://creativecommons.org/licenses/)";
+  } else if (license === "eclipse") {
+    return "[![eclipse sheild](https://img.shields.io/badge/license-Eclipse-blue)]";
+  } else if (license !== "N/A") {
+    return "[![N/A sheild](https://img.shields.io/badge/license-N%2FA-red)](https://www.eclipse.org/legal/epl-2.0/)";
   }
 }
 
@@ -27,7 +33,8 @@ function renderLicenseSection(license) {}
 //how can i call this function
 //this will construct entire readme file
 function generateMarkdown(data) {
-  return `# ${data.title} 
+  return `
+  # ${renderLicenseBadge(data.license)} ${data.title} 
   ## Description
   ${data.description}
 
@@ -40,11 +47,14 @@ function generateMarkdown(data) {
   
   -[Test](#test)
   
-  -[Questions](#questions)
+  -[Questions](#Questions)
   
   ## Installation
-  '''''${data.installation}'''''
-
+  
+  ~~~
+  ${data.installation}
+  ~~~
+  
   ## Usage 
   ${data.usage}
   
@@ -56,11 +66,12 @@ function generateMarkdown(data) {
 
   ## Questions
   ${data.github}
+  
   ${data.email}
 
 
 
-
+  
 `;
 }
 
