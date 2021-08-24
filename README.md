@@ -47,3 +47,8 @@ Have more questions? please reach out via message at one of these provdided link
 github.com/AdamKuemmel
 
 adamkuemmel@gmail.com
+
+## video walkthru
+
+Click this link to for a walkthru of creating a read me
+https://drive.google.com/file/d/1YQAF1aRB39dXD3-DIzSG39OyEooz1w1g/view
